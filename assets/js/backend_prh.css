@@ -1,0 +1,142 @@
+  .row_padding_10{
+    padding: 10px 10px 10px 10px !important;
+  }
+  .input_current{
+    border: 2px solid rgba(90, 209, 173, 0.548) !important;
+    border-radius: 10px !important;
+  }
+  .input_wrong{
+    border: 2px solid rgba(209, 90, 90, 0.548) !important;
+    border-radius: 10px !important;
+  }
+  .margin_10{
+    margin: 10px 10px 10px 10px;
+  }
+  .colorred{
+    color: red;
+    font-size: 0.8rem;
+  }
+  .background-red{
+    background: rgba(240, 95, 95, .1);
+  }
+  p{
+    margin-top: 10px !important;
+  }
+  .tr-prh{
+    background: #6F4984 !important; 
+    color:white;
+  }
+  .btn-prh {
+    box-shadow: 0 4px 20px 0px rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(156 39 176 / 40%);
+    background: linear-gradient( 60deg , #ab47bc, #8e24aa);
+    color: white !important;
+  }
+  .bg-prh {
+    box-shadow: 0 4px 20px 0px rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(156 39 176 / 40%);
+    background: linear-gradient( 60deg , #ab47bc, #8e24aa);
+    color: white !important;
+  }
+  .a_link_white{
+    color: white !important;
+  }
+
+  /*test*/
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    overflow: auto;
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+.modal-window {
+    position: relative;
+    background-color: #FFFFFF;
+    width: 50%;
+    margin: 10% auto;
+    padding: 20px;
+}
+
+.modal-window.small {
+    width: 75%;
+}
+
+.modal-window.large {
+    width: 75%;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgba(0,0,0,0.3);
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.close:hover,
+.close:focus {
+    color: #000000;
+    cursor: pointer;
+}
+
+.open {
+    display: block !important;
+}
+
+.line_status_new {
+    height: 240px;
+    width: 5px;
+    background-color: lightblue;
+    position: absolute;
+    padding-right: 5px;
+    left: 0.2px;
+}
+.line_status_Pending {
+    height: 240px;
+    width: 5px;
+    background-color: orange;
+    position: absolute;
+    padding-right: 5px;
+    left: 0.2px;
+}
+.line_status_Process {
+    height: 240px;
+    width: 5px;
+    background-color: purple;
+    position: absolute;
+    padding-right: 5px;
+    left: 0.2px;
+}
+.line_status_Done {
+    height: 240px;
+    width: 5px;
+    background-color: #31b131;
+    position: absolute;
+    padding-right: 5px;
+    left: 0.2px;
+}
+.line_status_Unsuccess {
+    height: 240px;
+    width: 5px;
+    background-color: gray;
+    position: absolute;
+    padding-right: 5px;
+    left: 0.2px;
+}
+.line_status_Cancel {
+    height: 240px;
+    width: 5px;
+    background-color: red;
+    position: absolute;
+    padding-right: 5px;
+    left: 0.2px;
+}
