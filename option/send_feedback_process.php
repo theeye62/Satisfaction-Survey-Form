@@ -44,7 +44,7 @@
         // $result = curl_exec( $chOne ); 
 
         //ส่งข้อความที่ 2 (ทำเผื่อเอาไว้)
-        /*$sToken2 = "kaPknlGVcBIowgVPkxSYhqyKJCTyNMJwA95BFyP96C2";
+        /*$sToken2 = "";
         $headers2 = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: Bearer '.$sToken2.'', );
         curl_setopt($chOne, CURLOPT_HTTPHEADER, $headers2); 
         curl_setopt( $chOne, CURLOPT_RETURNTRANSFER, 1); 
@@ -97,7 +97,7 @@
         // $result = curl_exec( $chOne ); 
 
         //ส่งข้อความที่ 2 (ทำเผื่อเอาไว้)
-        /*$sToken2 = "kaPknlGVcBIowgVPkxSYhqyKJCTyNMJwA95BFyP96C2";
+        /*$sToken2 = "";
         $headers2 = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: Bearer '.$sToken2.'', );
         curl_setopt($chOne, CURLOPT_HTTPHEADER, $headers2); 
         curl_setopt( $chOne, CURLOPT_RETURNTRANSFER, 1); 
