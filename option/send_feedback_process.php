@@ -22,35 +22,41 @@
         mysqli_query($conn, $query) or die(mysqli_error($conn));
         echo $query;
         // ------------------------------------ line notify ------------------------------------
-        // $sToken = "";
-        // $sMessage = "NEW FEEDBACK!!\n";
-        // $sMessage .= "\n";
-        // $sMessage .= "TOPIC: " . $topic . "\n";
-        // $sMessage .= "วันที่นัดหมาย: " . $date_select . "\n";
-        // $sMessage .= "เวลา: " . $time_select . "\n";
-        // $sMessage .= "ชื่อ-นามสกุล: " . $app_name_lastname . "\n";
-        // $sMessage .= "เบอร์โทรติดต่อ: " . $app_phone . "\n";
+        $sToken = "";
+        $sMessage = "New Feedback!!\n";
+        $sMessage .= "\n";
+        $sMessage .= "TOPIC: " . $topic . "\n";
+        $sMessage .= "ชื่อ-นามสกุล: " . $cus_name . "\n";
+        $sMessage .= "วันที่เข้ารับบริการ: " . $date_service . "\n";
+        $sMessage .= "แผนกที่เข้ารับบริการ: " . $department_service . "\n";
+        $sMessage .= "ความพึงพอใจภาพรวมแผนก: " . $complacent_depart . "\n";
+        $sMessage .= "ความพึงพอใจต่อพนักงาน: " . $complacent_staff . "\n";
+        $sMessage .= "ความพึงพอใจด้านสถานที่: " . $complacent_operat . "\n";
+        $sMessage .= "ข้อเสนอแนะอื่นๆ: " . $other_feedback . "\n";
+        $sMessage .= "เบอร์โทรติดต่อ: " . $cus_phone . "\n";
 
 
-        // $chOne = curl_init(); 
-        // curl_setopt( $chOne, CURLOPT_URL, "https://notify-api.line.me/api/notify"); 
-        // curl_setopt( $chOne, CURLOPT_SSL_VERIFYHOST, 0); 
-        // curl_setopt( $chOne, CURLOPT_SSL_VERIFYPEER, 0); 
-        // curl_setopt( $chOne, CURLOPT_POST, 1); 
-        // curl_setopt( $chOne, CURLOPT_POSTFIELDS, "message=".$sMessage); 
-        // $headers = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: Bearer '.$sToken.'', );
-        // curl_setopt($chOne, CURLOPT_HTTPHEADER, $headers); 
-        // curl_setopt( $chOne, CURLOPT_RETURNTRANSFER, 1); 
-        // $result = curl_exec( $chOne ); 
+        $chOne = curl_init(); 
+
+        curl_setopt( $chOne, CURLOPT_URL, "https://notify-api.line.me/api/notify"); 
+        curl_setopt( $chOne, CURLOPT_SSL_VERIFYHOST, 0); 
+        curl_setopt( $chOne, CURLOPT_SSL_VERIFYPEER, 0); 
+        curl_setopt( $chOne, CURLOPT_POST, 1); 
+        curl_setopt( $chOne, CURLOPT_POSTFIELDS, "message=".$sMessage); 
+
+        $headers = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: Bearer '.$sToken.'', );
+        curl_setopt($chOne, CURLOPT_HTTPHEADER, $headers); 
+        curl_setopt( $chOne, CURLOPT_RETURNTRANSFER, 1); 
+        $result = curl_exec( $chOne ); 
 
         //ส่งข้อความที่ 2 (ทำเผื่อเอาไว้)
-        /*$sToken2 = "";
+        $sToken2 = "";
         $headers2 = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: Bearer '.$sToken2.'', );
         curl_setopt($chOne, CURLOPT_HTTPHEADER, $headers2); 
         curl_setopt( $chOne, CURLOPT_RETURNTRANSFER, 1); 
-        $result = curl_exec( $chOne ); */
+        $result = curl_exec( $chOne );
 
-        // curl_close( $chOne );
+        curl_close( $chOne );
         // ------------------------------------ End line notify ------------------------------------
 
         header("location: ../index.php?feedback=success");
@@ -75,35 +81,37 @@
         mysqli_query($conn, $query) or die(mysqli_error($conn));
         echo $query;
         // ------------------------------------ line notify ------------------------------------
-        // $sToken = "";
-        // $sMessage = "NEW FEEDBACK!!\n";
-        // $sMessage .= "\n";
-        // $sMessage .= "TOPIC: " . $topic . "\n";
-        // $sMessage .= "วันที่นัดหมาย: " . $date_select . "\n";
-        // $sMessage .= "เวลา: " . $time_select . "\n";
-        // $sMessage .= "ชื่อ-นามสกุล: " . $app_name_lastname . "\n";
-        // $sMessage .= "เบอร์โทรติดต่อ: " . $app_phone . "\n";
+        $sToken = "";
+        $sMessage = "New Feedback!!\n";
+        $sMessage .= "\n";
+        $sMessage .= "TOPIC: " . $topic . "\n";
+        $sMessage .= "ชื่อ-นามสกุล: " . $cus_name . "\n";
+        $sMessage .= "วันที่เข้ารับบริการ: " . $date_service . "\n";
+        $sMessage .= "แผนกที่เข้ารับบริการ: " . $department_service . "\n";
+        $sMessage .= "ข้อร้องเรียนการให้บริการ: " . $other_feedback . "\n";
+        $sMessage .= "เบอร์โทรติดต่อ: " . $cus_phone . "\n";
 
+        $chOne = curl_init(); 
 
-        // $chOne = curl_init(); 
-        // curl_setopt( $chOne, CURLOPT_URL, "https://notify-api.line.me/api/notify"); 
-        // curl_setopt( $chOne, CURLOPT_SSL_VERIFYHOST, 0); 
-        // curl_setopt( $chOne, CURLOPT_SSL_VERIFYPEER, 0); 
-        // curl_setopt( $chOne, CURLOPT_POST, 1); 
-        // curl_setopt( $chOne, CURLOPT_POSTFIELDS, "message=".$sMessage); 
-        // $headers = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: Bearer '.$sToken.'', );
-        // curl_setopt($chOne, CURLOPT_HTTPHEADER, $headers); 
-        // curl_setopt( $chOne, CURLOPT_RETURNTRANSFER, 1); 
-        // $result = curl_exec( $chOne ); 
+        curl_setopt( $chOne, CURLOPT_URL, "https://notify-api.line.me/api/notify"); 
+        curl_setopt( $chOne, CURLOPT_SSL_VERIFYHOST, 0); 
+        curl_setopt( $chOne, CURLOPT_SSL_VERIFYPEER, 0); 
+        curl_setopt( $chOne, CURLOPT_POST, 1); 
+        curl_setopt( $chOne, CURLOPT_POSTFIELDS, "message=".$sMessage); 
+
+        $headers = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: Bearer '.$sToken.'', );
+        curl_setopt($chOne, CURLOPT_HTTPHEADER, $headers); 
+        curl_setopt( $chOne, CURLOPT_RETURNTRANSFER, 1); 
+        $result = curl_exec( $chOne ); 
 
         //ส่งข้อความที่ 2 (ทำเผื่อเอาไว้)
-        /*$sToken2 = "";
+        $sToken2 = "";
         $headers2 = array( 'Content-type: application/x-www-form-urlencoded', 'Authorization: Bearer '.$sToken2.'', );
         curl_setopt($chOne, CURLOPT_HTTPHEADER, $headers2); 
         curl_setopt( $chOne, CURLOPT_RETURNTRANSFER, 1); 
-        $result = curl_exec( $chOne ); */
+        $result = curl_exec( $chOne );
 
-        // curl_close( $chOne );
+        curl_close( $chOne );
         // ------------------------------------ End line notify ------------------------------------
 
         header("location: ../index.php?feedback=success");
